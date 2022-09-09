@@ -17,10 +17,12 @@
         setInterval(function () {
           count += 1;
           if (count == 25) count = 1; 
-          t1.setAttribute("src","crops/t"+count+"c1.png");
-          t2.setAttribute("src","crops/t"+count+"c2.png");
-          t3.setAttribute("src","crops/t"+count+"c3.png");
-          t4.setAttribute("src","crops/t"+count+"c4.png");
+          var hour = new Date().getHours();
+
+          t1.setAttribute("src","crops/h"+hour+"t"+count+"c1.png");
+          t2.setAttribute("src","crops/h"+hour+"t"+count+"c2.png");
+          t3.setAttribute("src","crops/h"+hour+"t"+count+"c3.png");
+          t4.setAttribute("src","crops/h"+hour+"t"+count+"c4.png");
           
           console.log(count);
         },2500);
@@ -31,10 +33,10 @@
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights">
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-image id="carrou" src="crops/t1c1.png" opacity="0.9" position="-0.4242 0 0.4242" height="2.7" width="1.2" rotation="0 -45 0"></a-plane>
-        <a-image id="carrou1" src="crops/t1c2.png" opacity="0.9" position="0.6 0 -0.6" height="2.7" width="1.2" rotation="0 90 0"></a-plane>
-        <a-image id="carrou2" src="crops/t1c3.png" opacity="0.9" position="0.6 0 -0.6" height="2.7" width="1.2" rotation="0 90 0"></a-plane>
-        <a-image id="carrou3" src="crops/t1c4.png" opacity="0.9" position="0.6 0 -0.6" height="2.7" width="1.2" rotation="0 90 0"></a-plane>
+        <a-image id="carrou" src="crops/h0t1c1.png" opacity="0.9" position="-0.4242 0 0.4242" height="2.7" width="1.2" rotation="0 -45 0"></a-plane>
+        <a-image id="carrou1" src="crops/h0t1c2.png" opacity="0.9" position="0.6 0 -0.6" height="2.7" width="1.2" rotation="0 90 0"></a-plane>
+        <a-image id="carrou2" src="crops/h0t1c3.png" opacity="0.9" position="0.6 0 -0.6" height="2.7" width="1.2" rotation="0 90 0"></a-plane>
+        <a-image id="carrou3" src="crops/h0t1c4.png" opacity="0.9" position="0.6 0 -0.6" height="2.7" width="1.2" rotation="0 90 0"></a-plane>
       </a-entity>
     </a-scene>
   </body>
